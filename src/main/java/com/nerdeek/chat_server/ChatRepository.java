@@ -1,12 +1,12 @@
 package com.nerdeek.chat_server;
 
-import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.mongodb.repository.Query;
+import org.springframework.data.mongodb.repository.ReactiveMongoRepository;
 import org.springframework.data.mongodb.repository.Tailable;
 
 import reactor.core.publisher.Flux;
 
-public interface ChatRepository extends MongoRepository<Chat, String> {
+public interface ChatRepository extends ReactiveMongoRepository<Chat, String> {
 
     @Tailable
     @Query("{sender:?0, receiver:?1}")
