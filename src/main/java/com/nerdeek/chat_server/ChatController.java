@@ -25,7 +25,6 @@ public class ChatController {
     @CrossOrigin
     @GetMapping(value = "/sender/{sender}/receiver/{receiver}", produces = MediaType.TEXT_EVENT_STREAM_VALUE)
     public Flux<Chat> getMsg(@PathVariable String sender, @PathVariable String receiver) {
-        System.out.println("aa");
         return chatRepository.mFindBySender(sender, receiver)
                 .subscribeOn(Schedulers.boundedElastic());
     }
