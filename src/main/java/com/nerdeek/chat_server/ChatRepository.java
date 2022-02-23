@@ -9,7 +9,7 @@ import reactor.core.publisher.Flux;
 public interface ChatRepository extends ReactiveMongoRepository<Chat, String> {
 
     @Tailable
-    @Query("{sender:?0, receiver:?1}")
+    @Query("{ $or : [{sender:?0, receiver:?1}, {sender:?1, receiver:?0}] }")
     Flux<Chat> mFindBySender(String sender, String receiver); // Flux (흐름) response 유지하면서 데이터 계속 보낼 수 있음
 
 }
