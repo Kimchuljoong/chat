@@ -8,11 +8,9 @@ function getSendMsgBox(msg, time){
 }
 
 function getReceiveMsgBox(msg, time){
-    return `<div class="received_msg">
-    <div class="received_withd_msg">
+    return `<div class="received_withd_msg">
       <p>${msg}</p>
       <span class="time_date"> ${time} </span>
-    </div>
     </div>`;
 }
 

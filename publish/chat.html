@@ -24,14 +24,16 @@
 
               <div class="profile_name">
                 <span>Chat</span>
-                <input id="start" type="button" style="float: right;" value="버튼">
-                <div style="float: right; border: 1px black solid">
-                  <span>receiver:</span>
-                  <input id="receiver" type="text" style="width: 100px;" />
-                </div>
-                <div style="float: right; border: 1px black solid">
-                  <span>sender:</span>
-                  <input id="sender" type="text" style="width: 100px;" />
+                <div style="float: right;">
+                  <div style="float: left; border: 1px black solid">
+                    <span>sender:</span>
+                    <input id="sender" type="text" style="width: 100px;" />
+                  </div>
+                  <div style="float: left; border: 1px black solid">
+                    <span>receiver:</span>
+                    <input id="receiver" type="text" style="width: 100px;" />
+                  </div>
+                  <button id="start" type="button" style="float: left;">버튼</button>
                 </div>
               </div>
               
@@ -41,7 +43,9 @@
               <div class="type_msg">
                 <div class="input_msg_write">
                   <input id="chat-outgoing-msg" type="text" class="write_msg" placeholder="Type a message" />
-                  <button id="chat-send" class="msg_send_btn" type="button"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+                  <button id="chat-send" class="msg_send_btn" type="button">
+                    <i class="fa fa-paper-plane" aria-hidden="true"></i>
+                  </button>
                 </div>
               </div>
     
